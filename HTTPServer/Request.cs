@@ -69,7 +69,14 @@ namespace HTTPServer
           //throw new NotImplementedException();
             requestLines = contentLines[0].Split(' ');
             if (ValidateIsURI(requestLines[1]))
+            {
+                
+                method = RequestMethod.GET;
+                relativeURI = requestLines[1];
+                relativeURI = relativeURI.TrimStart('/');
+                httpVersion = HTTPVersion.HTTP11;
                 return true;
+            }
             return false;
         }
 
@@ -81,16 +88,27 @@ namespace HTTPServer
         private bool LoadHeaderLines()
         {
             // throw new NotImplementedException();
-            string[] headers = contentLines[1].Split(':');
-            if (headers.Length == 0) return false;
-            headerLines.Add(headers[0], headers[1]);
+            headerLines = new Dictionary<string, string>();
+            for(int i = 1; i < contentLines.Length; i++)
+            {
+                if (contentLines[i].Trim()=="")
+                    continue;
+                string[] headers = contentLines[i].Split(':');
+                headerLines.Add(headers[0], headers[1]);
+            }
+            if (headerLines.Count == 0) return false;
             return true;
         }
 
         private bool ValidateBlankLine()
         {
             //throw new NotImplementedException();
-            return contentLines[2] == "\n";
+            for (int i = 1; i < contentLines.Length; i++)
+            {
+                if (contentLines[i].Trim() == "")
+                    return true;
+            }
+            return false;
         }
 
     }

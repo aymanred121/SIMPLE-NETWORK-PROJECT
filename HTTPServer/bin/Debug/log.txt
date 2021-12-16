@@ -1,3 +1,0 @@
-12/16/2021 7:19:15 AM
-System.IndexOutOfRangeException: Index was outside the bounds of the array.
-   at HTTPServer.Server.LoadRedirectionRules(String filePath) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\Template[2021-2022]\HTTPServer\Server.cs:line 179
