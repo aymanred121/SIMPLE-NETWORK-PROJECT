@@ -45,7 +45,7 @@ namespace HTTPServer
             headerLines.Add("\r\n");
             if (redirectoinPath != "")
             {
-            headerLines.Add($"Location: {redirectoinPath}");
+                headerLines.Add($"Location: {Path.Combine(Configuration.RootPath, redirectoinPath)}");
             headerLines.Add("\r\n");
             }
             headLine = string.Join("", headerLines);

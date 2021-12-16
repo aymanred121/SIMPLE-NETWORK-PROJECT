@@ -92,7 +92,7 @@ namespace HTTPServer
         Response HandleRequest(Request request)
         {
           //  throw new NotImplementedException();
-            StatusCode code;
+            StatusCode code = StatusCode.OK;
             string content;
             try
             {
@@ -100,18 +100,17 @@ namespace HTTPServer
                if(!request.ParseRequest())
                 {
                     code = StatusCode.BadRequest;
-                    return new Response(StatusCode.BadRequest,"text/html","","");
+                  //  return new Response(StatusCode.BadRequest,"text/html","","");
                     //this is a bad request
                 }
                 //TODO: map the relativeURI in request to get the physical path of the resource.
-                string physicalPath = Configuration.RootPath +"\\"+ request.relativeURI;
+                string physicalPath =Path.Combine( Configuration.RootPath, request.relativeURI);
                 //TODO: check for redirect
                 string redirctedPath=GetRedirectionPagePathIFExist(request.relativeURI);
-                string redircationPath = "";
                 if (redirctedPath.Length != 0)
                 {
                     code = StatusCode.Redirect;
-                    redircationPath = Configuration.RootPath+"\\"+redirctedPath;
+                    redirctedPath = Path.Combine(Configuration.RootPath,redirctedPath);
                   
                 }
 
@@ -120,17 +119,17 @@ namespace HTTPServer
                 if (!File.Exists(physicalPath))
                 {
                     code = StatusCode.NotFound;
-                    redircationPath = Configuration.RootPath+ "\\Notfound.html";
+                    redirctedPath = Path.Combine( Configuration.RootPath, "Notfound.html");
                 }
                 //TODO: read the physical file
                 StreamReader sr;
-                    if (redircationPath.Length == 0)
+                    if (redirctedPath.Length == 0)
                     sr = new StreamReader(physicalPath);
                 else
-                    sr = new StreamReader(redircationPath);
+                    sr = new StreamReader(redirctedPath);
                 string pageContent = sr.ReadToEnd();
                 // Create OK response
-                return new Response(StatusCode.OK, "text/html",pageContent,redircationPath);
+                return new Response(code, "text/html",pageContent,redirctedPath);
             }
             catch (Exception ex)
             {

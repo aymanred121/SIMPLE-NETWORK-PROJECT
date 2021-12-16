@@ -1,0 +1,173 @@
+12/17/2021 12:35:16 AM
+System.ArgumentNullException: Value cannot be null.
+Parameter name: path2
+   at System.IO.Path.Combine(String path1, String path2)
+   at HTTPServer.Server.HandleRequest(Request request) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 107
+12/17/2021 12:35:16 AM
+System.ArgumentNullException: Value cannot be null.
+Parameter name: path2
+   at System.IO.Path.Combine(String path1, String path2)
+   at HTTPServer.Server.HandleRequest(Request request) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 107
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.ArgumentNullException: Value cannot be null.
+Parameter name: path2
+   at System.IO.Path.Combine(String path1, String path2)
+   at HTTPServer.Server.HandleRequest(Request request) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 107
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.ArgumentNullException: Value cannot be null.
+Parameter name: path2
+   at System.IO.Path.Combine(String path1, String path2)
+   at HTTPServer.Server.HandleRequest(Request request) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 107
+12/17/2021 12:35:16 AM
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:16 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:17 AM
+12/17/2021 12:35:17 AM
+12/17/2021 12:35:17 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at HTTPServer.Request.ParseRequestLine() in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Request.cs:line 71
+   at HTTPServer.Request.ParseRequest() in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Request.cs:line 57
+   at HTTPServer.Server.HandleRequest(Request request) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 100
+12/17/2021 12:35:17 AM
+System.ArgumentNullException: Value cannot be null.
+Parameter name: path2
+   at System.IO.Path.Combine(String path1, String path2)
+   at HTTPServer.Server.HandleRequest(Request request) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 107
+12/17/2021 12:35:17 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:17 AM
+12/17/2021 12:35:17 AM
+System.Net.Sockets.SoSystem.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+cketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:17 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:17 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:17 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:17 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   at HTTPServer.Server.HandleConnection(Object obj) in C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\Server.cs:line 56
+12/17/2021 12:35:17 AM
+System.Net.Sockets.SocketException (0x80004005): An established connection was aborted by the software in your host machine
+   at System.Net.Socke

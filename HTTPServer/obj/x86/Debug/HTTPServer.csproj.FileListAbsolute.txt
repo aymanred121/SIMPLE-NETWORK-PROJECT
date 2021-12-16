@@ -8,3 +8,9 @@ C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\Templa
 C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\Template[2021-2022]\HTTPServer\obj\x86\Debug\HTTPServer.csproj.CoreCompileInputs.cache
 C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\Template[2021-2022]\HTTPServer\obj\x86\Debug\HTTPServer.exe
 C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\Template[2021-2022]\HTTPServer\obj\x86\Debug\HTTPServer.pdb
+C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\bin\Debug\HTTPServer.exe
+C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\bin\Debug\HTTPServer.pdb
+C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\obj\x86\Debug\HTTPServer.csproj.AssemblyReference.cache
+C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\obj\x86\Debug\HTTPServer.csproj.CoreCompileInputs.cache
+C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\obj\x86\Debug\HTTPServer.exe
+C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\obj\x86\Debug\HTTPServer.pdb
