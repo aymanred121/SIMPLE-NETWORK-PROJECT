@@ -68,7 +68,7 @@ namespace HTTPServer
                     // TODO: Call HandleRequest Method that returns the response
                    Response response= HandleRequest(clientRequset);
                     // TODO: Send Response back to client
-                    clientSock.Send(Encoding.ASCII.GetBytes(response.));
+                    clientSock.Send(Encoding.ASCII.GetBytes(response.ResponseString));
 
                 }
                 catch (Exception ex)
@@ -169,11 +169,13 @@ namespace HTTPServer
             {
                 // TODO: using the filepath paramter read the redirection rules from file 
                 string rules = new StreamReader(filePath).ReadToEnd();
-                string[] listOfRules = rules.Split('\n');
+                string[] listOfRules = rules.Split(new char[] {'\r' ,'\n' });
                 // then fill Configuration.RedirectionRules dictionary
-                foreach(string rule in listOfRules)
+                Configuration.RedirectionRules = new Dictionary<string, string>();
+                foreach (string rule in listOfRules)
                 {
                     string[] lists = rule.Split(',');
+                    if (lists.Length == 0) break;
                     Configuration.RedirectionRules.Add(lists[0],lists[1]);
                 }
                
