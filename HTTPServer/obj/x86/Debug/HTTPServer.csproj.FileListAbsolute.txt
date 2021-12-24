@@ -14,3 +14,9 @@ C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE
 C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\obj\x86\Debug\HTTPServer.csproj.CoreCompileInputs.cache
 C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\obj\x86\Debug\HTTPServer.exe
 C:\Users\ayman\Desktop\Pdf\5th semester\NETWORK\Networks Project Template\SIMPLE-NETWORK-PROJECT\HTTPServer\obj\x86\Debug\HTTPServer.pdb
+D:\SIMPLE-NETWORK-PROJECT\HTTPServer\bin\Debug\HTTPServer.exe
+D:\SIMPLE-NETWORK-PROJECT\HTTPServer\bin\Debug\HTTPServer.pdb
+D:\SIMPLE-NETWORK-PROJECT\HTTPServer\obj\x86\Debug\HTTPServer.csproj.AssemblyReference.cache
+D:\SIMPLE-NETWORK-PROJECT\HTTPServer\obj\x86\Debug\HTTPServer.csproj.CoreCompileInputs.cache
+D:\SIMPLE-NETWORK-PROJECT\HTTPServer\obj\x86\Debug\HTTPServer.exe
+D:\SIMPLE-NETWORK-PROJECT\HTTPServer\obj\x86\Debug\HTTPServer.pdb

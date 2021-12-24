@@ -48,33 +48,54 @@ namespace HTTPServer
             // throw new NotImplementedException();
             bool isPerfect = true;
             //TODO: parse the receivedRequest using the \r\n delimeter   
-          contentLines = requestString.Split(new char[] { '\r', '\n' });
+            contentLines = requestString.Split(new char[] { '\r', '\n' });
             // check that there is atleast 3 lines: Request line, Host Header, Blank line (usually 4 lines with the last empty line for empty content)
             if (contentLines.Length < 3)
                 return false;
 
             // Parse Request line
-           isPerfect= ParseRequestLine();
+            isPerfect = ParseRequestLine();
             if (!isPerfect) return false;
             // Validate blank line exists
-           isPerfect=ValidateBlankLine();
+            isPerfect = ValidateBlankLine();
             if (!isPerfect) return false;
             // Load header lines into HeaderLines dictionary
-           isPerfect= LoadHeaderLines();
+            isPerfect = LoadHeaderLines();
             return isPerfect;
         }
 
         private bool ParseRequestLine()
         {
-          //throw new NotImplementedException();
+            //throw new NotImplementedException();
             requestLines = contentLines[0].Split(' ');
             if (ValidateIsURI(requestLines[1]))
             {
-                
-                method = RequestMethod.GET;
+                switch (requestLines[0])
+                {
+                    case "GET":
+                        method = RequestMethod.GET;
+                        break;
+                    case "POST":
+                        method = RequestMethod.POST;
+                        break;
+                    case "HEAD":
+                        method = RequestMethod.HEAD;
+                        break;
+                }
                 relativeURI = requestLines[1];
                 relativeURI = relativeURI.TrimStart('/');
-                httpVersion = HTTPVersion.HTTP11;
+                switch (requestLines[2])
+                {
+                    case "HTTP/1.1":
+                        httpVersion = HTTPVersion.HTTP11;
+                        break;
+                    case "HTTP/1.0":
+                        httpVersion = HTTPVersion.HTTP10;
+                        break;
+                    default:
+                        httpVersion = HTTPVersion.HTTP09;
+                        break;
+                }
                 return true;
             }
             return false;
@@ -89,9 +110,9 @@ namespace HTTPServer
         {
             // throw new NotImplementedException();
             headerLines = new Dictionary<string, string>();
-            for(int i = 1; i < contentLines.Length; i++)
+            for (int i = 1; i < contentLines.Length; i++)
             {
-                if (contentLines[i].Trim()=="")
+                if (contentLines[i].Trim() == "")
                     continue;
                 string[] headers = contentLines[i].Split(':');
                 headerLines.Add(headers[0], headers[1]);
@@ -105,11 +126,7 @@ namespace HTTPServer
         private bool ValidateBlankLine()
         {
             //throw new NotImplementedException();
-            for (int i = 1; i < contentLines.Length; i++)
-            {
-                if (contentLines[i].Trim() == "")
-                    return true;
-            }
+            if (contentLines.Last() == "") return true;
             return false;
         }
 

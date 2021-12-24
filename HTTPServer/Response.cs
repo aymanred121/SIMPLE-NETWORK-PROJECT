@@ -30,9 +30,9 @@ namespace HTTPServer
         List<string> headerLines = new List<string>();
         public Response(StatusCode code, string contentType, string content, string redirectoinPath)
         {
-        //    throw new NotImplementedException();
+            //    throw new NotImplementedException();
 
-           
+
             string statueLine = GetStatusLine(code);
 
             // TODO: Add headlines (Content-Type, Content-Length,Date, [location if there is redirection])
@@ -45,20 +45,25 @@ namespace HTTPServer
             headerLines.Add("\r\n");
             if (redirectoinPath != "")
             {
-                headerLines.Add($"Location: {Path.Combine(Configuration.RootPath, redirectoinPath)}");
-            headerLines.Add("\r\n");
+                headerLines.Add($"Location: {redirectoinPath}");
+                headerLines.Add("\r\n");
             }
             headLine = string.Join("", headerLines);
 
             // TODO: Create the request string
-             responseString =statueLine+"\r\n"+ headLine+ content;
-            new Request(responseString);
+            responseString = statueLine + "\r\n" + headLine + "\r\n" + content;
+            if (redirectoinPath != "")
+            {
+                Request r = new Request(responseString);
+                r.ParseRequest();
+            }
+
         }
 
         private string GetStatusLine(StatusCode code)
         {
             // TODO: Create the response status line and return it
-            string statusLine = HTTPVersion.HTTP11 +" "+ ((int)code) +" "+ code.ToString();
+            string statusLine = HTTPVersion.HTTP11 + " " + ((int)code) + " " + code.ToString();
             return statusLine;
         }
     }

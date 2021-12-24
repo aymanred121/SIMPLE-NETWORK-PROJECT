@@ -54,27 +54,22 @@ namespace HTTPServer
                     // TODO: Receive request
                     data = new byte[1024];
                     receivedLength = clientSock.Receive(data);
-                    List<byte> receivedData = new List<byte>();
-                    for(int i = 0; i < receivedLength; i++)
-                    {
-                        receivedData.Add(data[i]);
-                    }
-                    data = receivedData.ToArray();
                     // TODO: break the while loop if receivedLen==0
                     if (receivedLength == 0)
                     {
-                       // Console.WriteLine($"clinet {clientSock.RemoteEndPoint} has ended connection");
+                        Console.WriteLine($"clinet {clientSock.RemoteEndPoint} has ended connection");
                         break;
                     }
                     // TODO: Create a Request object using received request string
-                    Request clientRequset = new Request(Encoding.ASCII.GetString(data));
-                  //  Console.WriteLine("Received: {0} from Client: {1}" ,Encoding.ASCII.GetString(data, 0, receivedLength), clientSock.RemoteEndPoint);
+                    Request clientRequset = new Request(Encoding.ASCII.GetString(data).TrimEnd('\0'));
                     // TODO: Call HandleRequest Method that returns the response
                    Response response= HandleRequest(clientRequset);
-                    // TODO: Send Response back to client
-                    clientSock.Send(Encoding.ASCII.GetBytes(response.ResponseString));
-                  //  clientSock.Send();
 
+                    // TODO: Send Response back to client
+                         byte[] msgResponse = Encoding.ASCII.GetBytes(response.ResponseString);
+
+                    clientSock.Send(msgResponse);
+                    //  clientSock.Send();
                 }
                 catch (Exception ex)
                 {
@@ -100,7 +95,8 @@ namespace HTTPServer
                if(!request.ParseRequest())
                 {
                     code = StatusCode.BadRequest;
-                  //  return new Response(StatusCode.BadRequest,"text/html","","");
+                    string badRequest = LoadDefaultPage("BadRequest.html");
+                  return new Response(StatusCode.BadRequest,"text/html",badRequest,"");
                     //this is a bad request
                 }
                 //TODO: map the relativeURI in request to get the physical path of the resource.
@@ -110,8 +106,7 @@ namespace HTTPServer
                 if (redirctedPath.Length != 0)
                 {
                     code = StatusCode.Redirect;
-                    redirctedPath = Path.Combine(Configuration.RootPath,redirctedPath);
-                  
+                    return new Response(code, "text/html","", redirctedPath);
                 }
 
                 //TODO: check file exists
@@ -119,17 +114,16 @@ namespace HTTPServer
                 if (!File.Exists(physicalPath))
                 {
                     code = StatusCode.NotFound;
-                    redirctedPath = Path.Combine( Configuration.RootPath, "Notfound.html");
+                 //   redirctedPath = Path.Combine( Configuration.RootPath, "Notfound.html");
+                   string notFoundPage= LoadDefaultPage("Notfound.html");
+                    return new Response(code, "text/html", notFoundPage, "");
                 }
                 //TODO: read the physical file
                 StreamReader sr;
-                    if (redirctedPath.Length == 0)
-                    sr = new StreamReader(physicalPath);
-                else
-                    sr = new StreamReader(redirctedPath);
+                sr = new StreamReader(physicalPath);
                 string pageContent = sr.ReadToEnd();
                 // Create OK response
-                return new Response(code, "text/html",pageContent,redirctedPath);
+                return new Response(code, "text/html",pageContent,"");
             }
             catch (Exception ex)
             {
