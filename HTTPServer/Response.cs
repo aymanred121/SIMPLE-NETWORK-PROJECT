@@ -54,8 +54,8 @@ namespace HTTPServer
             responseString = statueLine + "\r\n" + headLine + "\r\n" + content;
             if (redirectoinPath != "")
             {
-                Request r = new Request(responseString);
-                r.ParseRequest();
+             //   Request r = new Request(responseString);
+              //  r.ParseRequest();
             }
 
         }

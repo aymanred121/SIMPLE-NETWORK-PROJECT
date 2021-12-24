@@ -167,11 +167,16 @@ namespace HTTPServer
             {
                 // TODO: using the filepath paramter read the redirection rules from file 
                 string rules = new StreamReader(filePath).ReadToEnd();
-                string[] listOfRules = rules.Split(new char[] {'\r' ,'\n' });
+                string[] listOfRules = rules.Split(new char[] {'\r','\n'});
                 // then fill Configuration.RedirectionRules dictionary
                 Configuration.RedirectionRules = new Dictionary<string, string>();
-                    string[] lists = listOfRules[0].Split(',');
-                    Configuration.RedirectionRules.Add(lists[0],lists[1]);
+                foreach(var rule in listOfRules)
+                {
+                    if (rule == "")
+                        continue;
+                   string[] lists = rule.Split(',');
+                   Configuration.RedirectionRules.Add(lists[0],lists[1]);
+                }
                
             }
             catch (Exception ex)
