@@ -52,7 +52,7 @@ namespace HTTPServer
                 try
                 {
                     // TODO: Receive request
-                    data = new byte[1024];
+                    data = new byte[1024*1024];
                     receivedLength = clientSock.Receive(data);
                     // TODO: break the while loop if receivedLen==0
                     if (receivedLength == 0)
@@ -69,7 +69,6 @@ namespace HTTPServer
                          byte[] msgResponse = Encoding.ASCII.GetBytes(response.ResponseString);
 
                     clientSock.Send(msgResponse);
-                    //  clientSock.Send();
                 }
                 catch (Exception ex)
                 {
@@ -80,7 +79,7 @@ namespace HTTPServer
                
             }
 
-            // TODO: close client socket
+            // TODO: close client socket    
             clientSock.Close();
         }
 
@@ -130,7 +129,8 @@ namespace HTTPServer
                 // TODO: log exception using Logger class
                 Logger.LogException(ex);
                 // TODO: in case of exception, return Internal Server Error. 
-                return new Response(StatusCode.InternalServerError, "text/html", "","");
+                string InternalServerErrorString = LoadDefaultPage("InternalError.html");
+                return new Response(StatusCode.InternalServerError, "text/html", InternalServerErrorString,"");
             }
         }
 
