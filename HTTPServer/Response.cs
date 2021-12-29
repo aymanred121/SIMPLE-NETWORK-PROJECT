@@ -61,21 +61,21 @@ namespace HTTPServer
             string codeMsg = "";
             switch (code)
             {
-                case StatusCode.BadRequest:
-                    codeMsg = "Bad Request";
-                    break;
-                case StatusCode.InternalServerError:
-                    codeMsg = "Internal Server Error";
-                    break;
-                case StatusCode.NotFound:
-                    codeMsg = "Not Found";
-                    break;
-                case StatusCode.OK:
-                    codeMsg = "OK";
-                    break;
-                case StatusCode.Redirect:
-                    codeMsg = "Moved Permanently";
-                    break;
+                    case StatusCode.BadRequest:
+                        codeMsg = "Bad Request";
+                        break;
+                    case StatusCode.InternalServerError:
+                        codeMsg = "Internal Server Error";
+                        break;
+                    case StatusCode.NotFound:
+                        codeMsg = "Not Found";
+                        break;
+                    case StatusCode.OK:
+                        codeMsg = "OK";
+                        break;
+                    case StatusCode.Redirect:
+                        codeMsg = "Moved Permanently";
+                        break;
             }
             string statusLine = Configuration.ServerHTTPVersion + " " + ((int)code) + " " + codeMsg;
             return statusLine;

@@ -70,21 +70,31 @@ namespace HTTPServer
             requestLines = contentLines[0].Split(' ');
             if (ValidateIsURI(requestLines[1]))
             {
+                //currently only GET is implemented
+                try
+                {
                 switch (requestLines[0])
                 {
                     case "GET":
                         method = RequestMethod.GET;
                         break;
                     case "POST":
-                        method = RequestMethod.POST;
-                        break;
+                     method = RequestMethod.POST;
+                     throw new Exception("Only GET is implemented");
                     case "HEAD":
                         method = RequestMethod.HEAD;
-                        break;
+                        throw new Exception("Only GET is implemented");
                     default:
-                        return false;
+                      throw new Exception("Only GET is implemented");
+                    }
+                }
+                catch(Exception ex)
+                {
+                    Logger.LogException(ex);
+                    return false;
                 }
                 relativeURI = requestLines[1];
+                //Remove '/' at the start so the path could be corrent
                 relativeURI = relativeURI.TrimStart('/');
                 switch (requestLines[2])
                 {
@@ -114,20 +124,19 @@ namespace HTTPServer
             headerLines = new Dictionary<string, string>();
             for (int i = 1; i < contentLines.Length; i++)
             {
-                if (contentLines[i].Trim() == "")
+                if (contentLines[i].Count()<2)
                     continue;
                 string[] headers = contentLines[i].Split(':');
                 headerLines.Add(headers[0], headers[1]);
        
             }
-            if (headerLines.Count == 0) return false;
-            return true;
+            return headerLines.Count != 0;
         }
 
         private bool ValidateBlankLine()
         {
             //throw new NotImplementedException();
-            if (contentLines.Last() == "") return true;
+            if (contentLines.Last() == string.Empty) return true;
             return false;
         }
 
