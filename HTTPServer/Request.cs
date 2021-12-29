@@ -81,6 +81,8 @@ namespace HTTPServer
                     case "HEAD":
                         method = RequestMethod.HEAD;
                         break;
+                    default:
+                        return false;
                 }
                 relativeURI = requestLines[1];
                 relativeURI = relativeURI.TrimStart('/');
@@ -116,8 +118,7 @@ namespace HTTPServer
                     continue;
                 string[] headers = contentLines[i].Split(':');
                 headerLines.Add(headers[0], headers[1]);
-                if (headers[0] == "Location")
-                    relativeURI = headers[1];
+       
             }
             if (headerLines.Count == 0) return false;
             return true;

@@ -50,20 +50,34 @@ namespace HTTPServer
             }
             headLine = string.Join("", headerLines);
 
-            // TODO: Create the request string
             responseString = statueLine + "\r\n" + headLine + "\r\n" + content;
-            if (redirectoinPath != "")
-            {
-             //   Request r = new Request(responseString);
-              //  r.ParseRequest();
-            }
+            // TODO: Create the request string
 
         }
 
         private string GetStatusLine(StatusCode code)
         {
             // TODO: Create the response status line and return it
-            string statusLine = HTTPVersion.HTTP11 + " " + ((int)code) + " " + code.ToString();
+            string codeMsg = "";
+            switch (code)
+            {
+                case StatusCode.BadRequest:
+                    codeMsg = "Bad Request";
+                    break;
+                case StatusCode.InternalServerError:
+                    codeMsg = "Internal Server Error";
+                    break;
+                case StatusCode.NotFound:
+                    codeMsg = "Not Found";
+                    break;
+                case StatusCode.OK:
+                    codeMsg = "OK";
+                    break;
+                case StatusCode.Redirect:
+                    codeMsg = "Moved Permanently";
+                    break;
+            }
+            string statusLine = Configuration.ServerHTTPVersion + " " + ((int)code) + " " + codeMsg;
             return statusLine;
         }
     }

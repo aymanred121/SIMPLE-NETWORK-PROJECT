@@ -118,11 +118,9 @@ namespace HTTPServer
                     return new Response(code, "text/html", notFoundPage, "");
                 }
                 //TODO: read the physical file
-                StreamReader sr;
-                sr = new StreamReader(physicalPath);
-                string pageContent = sr.ReadToEnd();
+                string pageContent = LoadDefaultPage(physicalPath);
                 // Create OK response
-                return new Response(code, "text/html",pageContent,"");
+                    return new Response(code, "text/html",pageContent,"");
             }
             catch (Exception ex)
             {
